@@ -19,6 +19,7 @@ namespace Microsoft.Azure.SignalR.Samples.ChatRoom
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton < IConfiguration > (Configuration); 
             services.AddSignalR()
                     .AddAzureSignalR();
         
